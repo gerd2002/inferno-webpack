@@ -16,6 +16,22 @@ module.exports = {
                 ]
             },
             {
+              test: /\.scss$/,
+              use: [
+                  'style-loader',
+                  'css-loader',
+                  'sass-loader'
+              ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'less-loader'
+                ]
+            },
+            {
                 test: /\.css$/,
                 use: [
                     'style-loader',
@@ -41,7 +57,7 @@ module.exports = {
     },
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "../dist"),
         filename: 'bundle.js',
     }
 };
